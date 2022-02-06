@@ -1,139 +1,177 @@
-<!--
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
--->
-<!--
-  This example requires updating your template:
-
-  ```
-  <html class="h-full bg-white">
-  <body class="h-full">
-  ```
--->
 <div class="min-h-full flex">
-  <div class="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
-    <div class="mx-auto w-full max-w-sm lg:w-96">
-      <div>
-        <img class="h-12 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow">
-        <h2 class="mt-6 text-3xl font-extrabold text-gray-900">
-          Sign in to your account
-        </h2>
-        <p class="mt-2 text-sm text-gray-600">
-          Or
-          <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
-            start your 14-day free trial
-          </a>
-        </p>
-      </div>
-
-      <div class="mt-8">
-        <div>
-          <div>
-            <p class="text-sm font-medium text-gray-700">
-              Sign in with
-            </p>
-
-            <div class="mt-1 grid grid-cols-3 gap-3">
-              <div>
-                <a href="#" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
-                  <span class="sr-only">Sign in with Facebook</span>
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z" clip-rule="evenodd" />
-                  </svg>
-                </a>
-              </div>
-
-              <div>
-                <a href="#" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
-                  <span class="sr-only">Sign in with Twitter</span>
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                    <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                  </svg>
-                </a>
-              </div>
-
-              <div>
-                <a href="#" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
-                  <span class="sr-only">Sign in with GitHub</span>
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="mt-6 relative">
-            <div class="absolute inset-0 flex items-center" aria-hidden="true">
-              <div class="w-full border-t border-gray-300"></div>
-            </div>
-            <div class="relative flex justify-center text-sm">
-              <span class="px-2 bg-white text-gray-500">
-                Or continue with
+    <div class="flex flex-col py-12 px-4 sm:px-6 lg:px-10 xl:px-12">
+      <img class="flex flex-start w-48 h-8" src="../../../assets/logo_text.png" alt="Workflow">
+      <div class="flex-1 flex flex-col justify-center items-center py-12 px-4 sm:px-6 lg:px-10 xl:px-12">
+        <div class="px-0 sm:px-10">
+          <div class="mx-auto w-full max-w-sm lg:w-96">
+            <div>
+              <span class="mt-6 text-lg font-semibold text-black">
+                Join the Network
               </span>
+              <p class="mt-2 text-sm text-grey-text text-justify">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the and typesetting industry. Lorem Ipsum has been the
+              </p>
+            </div>
+      
+            <div *ngIf="selectedStep === 0" class="mt-8">
+              <div>
+                <div>
+                  <p class="mb-6 text-sm text-grey-text font-semibold">
+                    Continue as
+                   </p>
+      
+                  <div class="flex  items-center space-x-12">
+                    <div class="flex flex-col justify-center items-center">
+                      <div class="w-20 h-20 inline-flex justify-center items-center border-2 border-primary rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                        <span class="sr-only">Student</span>
+                        <svg width="49" height="31" viewBox="0 0 49 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M48.3736 9.56777L24.8778 0.567055C24.6411 0.477648 24.3787 0.477648 24.142 0.567055L0.646122 9.56777C0.256535 9.71878 0 10.0875 0 10.498C0 10.9082 0.256193 11.2772 0.64578 11.4279L8.16459 14.3083V23.4196C8.16459 25.8195 16.991 30.5 24.5101 30.5C32.0291 30.5 40.8555 25.8195 40.8555 23.4193V14.3088L43.9202 13.1288V22.7296C43.2509 23.1049 42.7035 23.6584 42.3421 24.3254C41.9805 24.9928 41.8191 25.7465 41.8769 26.4996C41.8769 28.7397 43.2252 30.5 44.9416 30.5C46.658 30.5 48.0063 28.7397 48.0063 26.4996C48.0549 25.7492 47.8897 25.0001 47.5289 24.3361C47.1683 23.6721 46.6262 23.1197 45.9633 22.7392V12.349L48.3539 11.4289C48.7438 11.2782 49 10.9092 49 10.499C49 10.0884 48.7438 9.71977 48.3539 9.56871L48.3736 9.56777ZM38.8117 23.3089C38.1581 24.4088 31.5484 28.4994 24.51 28.4994C17.4715 28.4994 10.8615 24.4092 10.2083 23.3089V15.0981L24.1422 20.4285C24.3789 20.518 24.6409 20.518 24.8776 20.4285L38.8116 15.0981L38.8117 23.3089ZM24.4075 10.4978L40.9877 12.1178L24.51 18.4283L3.81262 10.4978L24.51 2.56684L45.2074 10.4978H45.0644L24.6332 8.49771C24.0692 8.44246 23.5656 8.84529 23.5092 9.39745C23.4528 9.94995 23.8646 10.4425 24.4287 10.4978L24.4075 10.4978ZM44.9412 28.4993C44.5222 28.4993 43.9195 27.7191 43.9195 26.4992C43.9195 25.2791 44.5222 24.4992 44.9412 24.4992C45.3602 24.4992 45.9628 25.2794 45.9628 26.4992C45.9628 27.719 45.3602 28.4993 44.9412 28.4993Z" fill="#510ACC"/>
+                        </svg>  
+                      </div>
+                      <span class="text-primary text-sm font-semibold pt-4">Student</span>
+                    </div>
+                    <div class="flex flex-col justify-center items-center">
+                      <div class="w-20 h-20 inline-flex justify-center items-center border-2 border-primary rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                        <span class="sr-only">Company</span>
+                        <svg width="39" height="37" viewBox="0 0 39 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M35.3734 7.23631H29.1446V3.79873C29.1446 1.97999 27.7421 0.500353 26.0181 0.500353L12.9817 0.5C11.2578 0.5 9.85527 1.97964 9.85527 3.79838V7.23559H3.62644C1.90251 7.23559 0.5 8.71523 0.5 10.534V33.2016C0.5 35.0204 1.90251 36.5 3.62644 36.5H35.3736C37.0975 36.5 38.5 35.0204 38.5 33.2016V10.5349C38.5 8.71614 37.0973 7.23631 35.3734 7.23631ZM12.2597 3.79873C12.2597 3.37891 12.5834 3.03767 12.9811 3.03767H26.0175C26.4154 3.03767 26.7389 3.37926 26.7389 3.79873V7.23595L12.2594 7.23559L12.2597 3.79873ZM36.0941 33.2013C36.0941 33.6211 35.7703 33.9623 35.3727 33.9623L3.62555 33.9627C3.22761 33.9627 2.90416 33.6211 2.90416 33.2016V10.5349C2.90416 10.115 3.22794 9.7738 3.62555 9.7738H35.3727C35.7706 9.7738 36.0941 10.1154 36.0941 10.5349V33.2013Z" fill="#510ACC"/>
+                        </svg>     
+                      </div>
+                      <span class="text-primary text-sm font-semibold pt-4">Company</span>
+                    </div>
+                    <div class="flex flex-col justify-center items-center">
+                      <div class="w-20 h-20 inline-flex justify-center items-center border-2 border-primary rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                        <span class="sr-only">School</span>
+                        <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7503 18.4999C17.6625 18.4999 17.5783 18.515 17.5 18.5427C17.4722 18.5525 17.4451 18.564 17.4189 18.5769C17.1709 18.6993 17.0003 18.9547 17.0003 19.2499V25.2499C17.0003 25.3358 17.0151 25.4203 17.0432 25.4998C17.0801 25.6043 17.1401 25.7004 17.2199 25.7802C17.2997 25.86 17.3957 25.9199 17.5 25.9569C17.5 25.9569 17.5001 25.9569 17.5 25.9569C17.5796 25.985 17.6641 25.9998 17.7501 25.9998C17.75 25.9998 17.7502 25.9998 17.7501 25.9998H25.2501C25.3359 25.9998 25.4205 25.9851 25.5 25.957C25.6046 25.9201 25.7007 25.8601 25.7806 25.7802C25.8604 25.7004 25.9204 25.6043 25.9574 25.4998C25.9855 25.4203 26.0002 25.3358 26.0002 25.2499V19.2499C26.0002 19.051 25.9212 18.8602 25.7806 18.7195C25.7219 18.6608 25.6544 18.6128 25.5812 18.5769C25.5549 18.5639 25.5277 18.5525 25.5 18.5427C25.4205 18.5146 25.3361 18.4999 25.2503 18.4999H17.7503ZM18.5003 19.9999V24.4999H24.5003V19.9999H18.5003ZM29 18.1313V40.9998H26V29.7498C26 29.6639 25.9853 29.5794 25.9572 29.4999C25.9202 29.3954 25.8603 29.2993 25.7804 29.2195C25.7006 29.1396 25.6045 29.0796 25.5 29.0427C25.4205 29.0146 25.3361 28.9999 25.2503 28.9998C25.2503 28.9998 25.2502 28.9998 25.2503 28.9998H17.7503C17.6627 28.9998 17.5783 29.0149 17.5001 29.0425C17.5002 29.0425 17.5001 29.0425 17.5001 29.0425C17.2871 29.1178 17.1181 29.2868 17.0428 29.4999C17.0151 29.578 17.0001 29.6622 17.0001 29.7498V40.9998H14.0001V18.1313L21.5001 12.6764L29 18.1313ZM30.191 17.1432C30.3852 17.2842 30.5 17.5098 30.5 17.7499V25.9998H41.75C41.9488 25.9998 42.1396 26.0791 42.2802 26.2197C42.4208 26.3604 42.4999 26.5512 42.4999 26.7501V41.75C42.4999 41.9489 42.4208 42.1397 42.2802 42.2804C42.1396 42.421 41.9487 42.5 41.7499 42.5H1.25012C1.05124 42.5 0.860387 42.421 0.719764 42.2804C0.57914 42.1397 0.500122 41.9489 0.500122 41.75V26.7501C0.500122 26.3359 0.835949 26.0001 1.25012 26.0001H12.5V17.7502C12.5 17.5101 12.6149 17.2844 12.8091 17.1435L20.75 11.3685V1.25C20.75 0.835826 21.0859 0.5 21.5 0.5H30.5C30.6989 0.5 30.8897 0.57902 31.0303 0.719641C31.171 0.860263 31.25 1.05111 31.25 1.25V7.24996C31.25 7.44884 31.171 7.63969 31.0303 7.78031C30.8897 7.92093 30.6989 7.99995 30.5 7.99995H22.2501L22.25 11.3682L30.191 17.1432ZM29.75 6.49997V2H22.2501V6.49997H29.75ZM12.5001 27.4998H2.0002V30.4998H12.5L12.5001 27.4998ZM2.0002 31.9998V40.9998H12.5001V31.9998H2.0002ZM24.5001 30.4998H18.5001V40.9998H24.5001V30.4998ZM41 31.9998H30.5V40.9998H40.9996L41 31.9998ZM41 30.4998V27.5L30.5 27.4998V30.4998H41Z" fill="#510ACC"/>
+                        </svg>  
+                      </div>
+                      <span class="text-primary text-sm font-semibold pt-4">School</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="selectedStep === 1" class="mt-6">    
+              <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="space-y-6">
+                <div class="grid grid-cols-2 gap-2">
+                  <div>
+                    <div class="mt-1">
+                      <input id="firstName" name="firstName" type="text" placeholder="First Name" formControlName="firstName" required class="text-grey-500 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    </div>
+                  </div>
+                  <div>
+                    <div class="mt-1">
+                      <input id="lastName" name="lastName" type="lastName" placeholder="Last Name" formControlName="lastName" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    </div>
+                  </div>
+                </div>
+                
+                <div>
+                  <div class="mt-1">
+                    <input id="email" name="email" type="email" placeholder="Email address" autocomplete="email" formControlName="email" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                  </div>
+                </div>
+                <div>
+                  <div class="mt-1">
+                    <input id="cellphoneNo" name="cellphoneNo" type="tel" placeholder="Cellphone No" autocomplete="cell-phoneno" formControlName="cellPhoneNo" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                  </div>
+                </div>
+    
+                <div class="space-y-1">
+                  <div class="relative mt-1">
+                    <input id="password" placeholder="Password" name="password" type="password" autocomplete="current-password" formControlName="password" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                      <ng-icon class="h-6 w-6 text-grey-icon" name="hero-lock-closed" size="18" >
+                      </ng-icon>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="space-y-1">
+                  <div class="relative mt-1">
+                    <input id="confirmPassword" placeholder="Confirm Password" name="confirmPassword" type="password" autocomplete="confirm-password" formControlName="confirmPassword" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                      <ng-icon class="h-6 w-6 text-grey-icon" name="hero-lock-closed" size="18" >
+                      </ng-icon>
+                    </div>
+                  </div>
+                </div>
+    
+                <div>
+                  <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                   Register
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
-
-        <div class="mt-6">
-          <form action="#" method="POST" class="space-y-6">
-            <div>
-              <label for="email" class="block text-sm font-medium text-gray-700">
-                Email address
-              </label>
-              <div class="mt-1">
-                <input id="email" name="email" type="email" autocomplete="email" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        <div aria-label="Progress" class="my-20">
+          <ol role="list" class="flex items-center">
+            <li *ngFor="let step of steps;let stepIdx=index" [ngClass]="{'pr-8':stepIdx !== steps.length - 1}" class="relative" (click)="stepClicked(stepIdx)">
+              <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                <div class="h-0.5 w-full bg-primary"></div>
               </div>
-            </div>
-
-            <div class="space-y-1">
-              <label for="password" class="block text-sm font-medium text-gray-700">
-                Password
-              </label>
-              <div class="mt-1">
-                <input id="password" name="password" type="password" autocomplete="current-password" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+              <div class="relative w-8 h-8 flex items-center justify-center border-2 border-stepper rounded-full hover:bg-primary hover:text-white" [ngClass]="{'bg-primary text-white': stepIdx === selectedStep, 'bg-white text-primary': stepIdx != selectedStep}">
+                <span>{{step.name}}</span>
+                <span class="sr-only">Step {{step.name}}</span>
               </div>
-            </div>
+            </li>
+        
+      
+          </ol>
+        </div>
+      </div>
+      <div class="flex justify-center items-center text-center relative">
+        <div class="absolute bottom-6"> 
+          <span class="text-xs font-semibold text-grey-500">By signing up, you agree to our &nbsp;<span class="text-grey-900">Terms, Data Policy</span> &nbsp;and &nbsp;<span class="text-grey-900">Cookies Policy</span>.</span>
+        </div>
+      </div>
+     
+    </div>
 
-            <div class="flex items-center justify-between">
-              <div class="flex items-center">
-                <input id="remember-me" name="remember-me" type="checkbox" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
-                <label for="remember-me" class="ml-2 block text-sm text-gray-900">
-                  Remember me
-                </label>
-              </div>
 
-              <div class="text-sm">
-                <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
-                  Forgot your password?
-                </a>
-              </div>
-            </div>
+  
 
-            <div>
-              <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                Sign in
-              </button>
-            </div>
-          </form>
+  <div class="hidden lg:block relative w-0 flex-1">
+    <img class="absolute inset-0 h-full w-full object-cover z-10" src="../../../assets/signup-img-bg.png" alt="">
+    <div class = "flex flex-col justify-center items-center px-lg h-full">
+      <div class = "flex flex-col flex-start">
+        <span class="text-white text-3xl z-50">
+          Let yourself be guided with 
+          <span class="font-bold">Studymapper!</span><br/>
+          We are here to <span class="font-bold">help you!</span>
+        </span>
+        <div class="flex space-x-2 py-8">
+          <div class="p-2 border border-white rounded z-50">
+            <span class="text-white text-sm">7000 schools</span>
+          </div>
+          <div class="p-2 border border-white rounded z-50">
+            <span class="text-white text-sm">55,000 training courses</span>
+          </div>
+          <div class="p-2 border border-white rounded z-50">
+            <span class="text-white text-sm">Free mentor dedicated to your research</span>
+          </div>
+        </div>
+        <div class="flex flex-col space-y-2 py-4 z-50 text-lg text-white">
+            <li>More than 30.000 students supported in their training. </li>
+            <li>Direct link with schools in France and in a selection of schools abroad.</li>
+            <li>A dedicated mentor accompanies you from A to Z in your search for training.</li>
+        </div>
+      </div>
+      <div class="absolute bottom-8 right-12 z-50">
+        <div class="flex space-x-2 py-2 text-white z-50">
+          <svg width="24" height="29" viewBox="0 0 24 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.2227 22.0695L15.1724 21.4046C15.3989 21.2639 15.6173 21.1462 15.829 21.0594C16.2949 20.8684 16.5875 20.8824 16.817 20.9998C16.8177 21.0001 16.8184 21.0005 16.8191 21.0009L16.8215 21.0021C18.3795 21.8165 19.9466 22.6357 21.5153 23.4201C22.102 23.7312 22.2669 23.9467 22.3085 24.0462L22.3087 24.0466C22.3225 24.0796 22.3955 24.254 22.099 24.7764L22.099 24.7764L22.0925 24.7881C21.6185 25.6501 20.7149 26.4898 19.647 27.0335C18.5727 27.5805 17.48 27.7556 16.6291 27.5106L16.6249 27.5094C6.90309 24.756 0.309858 15.5443 1.05775 5.28029C1.12231 4.40433 1.66532 3.4305 2.55147 2.59578C3.43185 1.76649 4.52829 1.19334 5.48756 1.03574L5.48982 1.03536C6.07677 0.937551 6.22613 1.06701 6.26088 1.09912C6.34492 1.17679 6.49311 1.41094 6.57399 2.05696C6.68059 2.92739 6.7872 3.80683 6.8939 4.68701L6.89494 4.69563C7.00131 5.57312 7.10777 6.45132 7.21424 7.32079L7.21416 7.3208L7.21584 7.33324C7.251 7.59331 7.16628 7.87126 6.83247 8.24175C6.48298 8.62966 5.97087 8.99382 5.3754 9.39084L5.36597 9.39712L5.35669 9.40362C4.70394 9.86052 4.41291 10.5496 4.33446 11.237C4.25816 11.9055 4.37096 12.6335 4.57421 13.3422C4.98253 14.7658 5.83206 16.3698 6.83609 17.8042C7.84012 19.2385 9.05646 20.5858 10.2543 21.4567C10.8505 21.8903 11.496 22.2454 12.1502 22.4026C12.8229 22.5641 13.57 22.5265 14.2227 22.0695Z" stroke="white" stroke-width="2"/>
+          </svg>
+          <span>06 271 179 632</span>
+          
         </div>
       </div>
     </div>
-  </div>
-  <div class="hidden lg:block relative w-0 flex-1">
-    <img class="absolute inset-0 h-full w-full object-cover" src="https://images.unsplash.com/photo-1505904267569-f02eaeb45a4c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1908&q=80" alt="">
+
+
   </div>
 </div>
 
