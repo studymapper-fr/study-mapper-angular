@@ -26,7 +26,6 @@ export class SignupComponent implements OnInit {
   }
 
   stepClicked(step: any) {
-    debugger;
     this.selectedStep = step;
   }
 
