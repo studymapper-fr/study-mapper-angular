@@ -15,7 +15,7 @@ const routes: Routes = [
         loadChildren: () =>
           import("../resume/resume.module").then((m) => m.ResumeModule),
       },
-      { path: "**", component: PageNotFoundComponent },
+      { path: "**", pathMatch: "full", component: PageNotFoundComponent },
     ],
   },
 ];

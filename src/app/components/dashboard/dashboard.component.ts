@@ -14,7 +14,13 @@ export class DashboardComponent implements OnInit {
 
   public secondaryMenuItems = SECONDARY_MENU_ITEMS;
 
+  public activeTitle: string = PRIMARY_MENU_ITEMS[0].title;
+
   constructor() {}
 
   ngOnInit(): void {}
+
+  setActiveTitle(title: string) {
+    this.activeTitle = title;
+  }
 }

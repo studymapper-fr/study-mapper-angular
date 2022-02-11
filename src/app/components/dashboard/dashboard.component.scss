@@ -2,13 +2,19 @@
 
 mat-toolbar {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   background: $gray-8;
   color: $black;
   border-bottom: 1px solid $gray-6;
 
+  .title {
+    font-weight: 300;
+    color: $indigo-1;
+  }
+
   .toolbar-items {
     margin-top: 8px;
+
     .icon {
       cursor: pointer;
       color: $indigo-1;
@@ -44,6 +50,7 @@ mat-sidenav-container {
   .logo {
     display: flex;
     justify-content: flex-start;
+
     img {
       width: 180px;
     }
@@ -69,6 +76,7 @@ mat-sidenav-container {
       text-align: left;
       display: flex;
       color: $gray-7;
+
       .icon {
         margin-top: 3px;
       }
