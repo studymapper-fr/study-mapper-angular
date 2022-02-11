@@ -1,0 +1,34 @@
+<div class="label-textfield-container">
+  <label *ngIf="label" class="field-label" [ngClass]="{ error: showError }">
+    {{ label }}
+    <span *ngIf="required" class="required-field">*</span>
+  </label>
+
+  <div class="input-group custom-input-group">
+    <div *ngIf="prefix" class="input-group-addon custom-group-input-addon">
+      {{ prefix }}
+    </div>
+
+    <input
+      #input
+      [ngClass]="{ error: showError }"
+      [type]="type"
+      [placeholder]="placeholder"
+      [(ngModel)]="value"
+      [disabled]="disabled"
+      class="form-control inner-field"
+      [tabindex]="tabIndex"
+      [maxlength]="maxLength"
+      (keyup)="keyUp.emit($event)"
+      (blur)="blur.emit($event)"
+      (keydown)="keyDown.emit($event)"
+      (keypress)="keyPress.emit($event)"
+      (focus)="onFocus.emit($event)"
+      (input)="onValueChange.emit($event)"
+    />
+
+    <div *ngIf="suffix" class="input-group-addon custom-group-input-addon">
+      {{ suffix }}
+    </div>
+  </div>
+</div>

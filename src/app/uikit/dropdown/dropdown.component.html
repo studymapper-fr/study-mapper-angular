@@ -1,0 +1,68 @@
+<div class="label-dropdown-container">
+  <label *ngIf="label" class="field-label" [ngClass]="{ error: showError }">
+    {{ label }}
+    <span *ngIf="required" class="required-field">*</span>
+  </label>
+
+  <div
+    class="btn-group dropdown-container"
+    [isDisabled]="disabled"
+    dropdown
+    [dropup]="dropup"
+  >
+    <button
+      id="dropdown-button"
+      type="button"
+      dropdownToggle
+      class="prop-btn dropdown-toggle"
+      aria-controls="dropdown"
+      [tabIndex]="tabIndex"
+      [ngClass]="{ error: showError, 'no-border': noBorder }"
+    >
+      <div
+        [ngClass]="{ 'secondary-text': displayValue === placeholder }"
+        class="truncate"
+      >
+        {{ displayValue }}
+      </div>
+      <span
+        *ngIf="selectedValue && showClearIcon"
+        class="material-icons clear-icon"
+        (click)="resetSelectedValue()"
+      >
+        clear
+      </span>
+      <span class="caret"></span>
+    </button>
+
+    <ul
+      id="dropdown"
+      class="dropdown-menu"
+      *dropdownMenu
+      role="menu"
+      aria-labelledby="dropdown-button"
+    >
+      <div class="menu-item-list">
+        <li
+          role="menuitem"
+          class="menu-item"
+          *ngFor="let item of displayedDropdownOptions"
+          [ngClass]="{ 'green-font': item.value === displayValue }"
+          (click)="modelChange(item)"
+        >
+          <span class="col-lg-10 no-padding item">
+            <div class="dropdown-item truncate" [title]="item.value">
+              {{ item.value }}
+            </div>
+          </span>
+          <span
+            class="col-lg-2 no-padding item item-next"
+            *ngIf="checkMark && item.value === displayValue"
+          >
+            <i class="fa fa-check" aria-hidden="true"></i>
+          </span>
+        </li>
+      </div>
+    </ul>
+  </div>
+</div>

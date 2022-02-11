@@ -1,0 +1,80 @@
+@import "../../theming/theme.scss";
+
+.icon-button {
+  min-height: 32px;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+  font-weight: $font-weight-bold;
+  background-color: transparent;
+  border: none;
+  font-weight: 400;
+
+  :host-context(.small-button) & {
+    min-height: 20px;
+    font-size: $font-size-smaller;
+  }
+
+  .icon {
+    color: $white;
+  }
+
+  .padded-text {
+    padding-left: 10px;
+  }
+}
+
+@each $key, $value in $icon-button-bg-colors {
+  .icon-button-#{$key},
+  .icon-button-#{$key}:focus {
+    color: $white;
+    background-color: $value;
+    outline: none;
+  }
+
+  $outlineTextColor: map-get($icon-button-outline-text-colors, $key);
+
+  .icon-button-outline-#{$key},
+  .icon-button-outline-#{$key}:focus {
+    border: 1px solid $value;
+    color: $outlineTextColor;
+    background-color: $white;
+    outline: none;
+
+    .icon {
+      color: $outlineTextColor;
+    }
+  }
+
+  .icon-button-#{$key}:hover,
+  .icon-button-outline-#{$key}:hover {
+    color: $white;
+    background-color: map-get($icon-button-hover-colors, $key);
+    outline: none;
+
+    .icon {
+      color: $white;
+    }
+  }
+
+  .icon-button-#{$key}:disabled {
+    background-color: $icon-button-disabled-bg;
+    color: $icon-button-disabled-color;
+
+    .icon {
+      color: $icon-button-disabled-color;
+    }
+  }
+
+  .icon-button-outline-#{$key}:disabled {
+    background-color: $icon-button-outline-disabled-bg;
+    color: $icon-button-outline-disabled-color;
+    border: 1px solid $icon-button-outline-disabled-border;
+
+    .icon {
+      color: $icon-button-outline-disabled-color;
+    }
+  }
+}

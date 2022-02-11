@@ -1,0 +1,95 @@
+@import "../../theming/theme.scss";
+
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  background: $gray-8;
+  color: $black;
+  border-bottom: 1px solid $gray-6;
+
+  .title {
+    font-weight: 400;
+    color: $indigo-1;
+  }
+
+  .toolbar-items {
+    margin-top: 8px;
+
+    .icon {
+      cursor: pointer;
+      color: $indigo-1;
+      margin-left: 10px;
+      margin-right: 2px;
+    }
+  }
+}
+
+mat-sidenav {
+  margin: 16px;
+  width: 250px;
+  border-right: none;
+  background-image: linear-gradient(to bottom right, $indigo-1, $indigo-3);
+  color: $white;
+  text-align: center;
+}
+
+.content {
+  height: calc(100vh);
+  border-radius: 10px;
+  margin: 16px;
+  margin-left: 32px;
+  padding: 20px;
+}
+
+mat-sidenav-container {
+  height: calc(100vh);
+}
+
+.side-bar-container {
+  .logo {
+    padding: 7px;
+    display: flex;
+    justify-content: flex-start;
+    background-color: $indigo;
+
+    img {
+      width: 180px;
+    }
+  }
+
+  .primary-menu-items {
+    padding-bottom: 8px;
+    border-bottom: 1px solid $gray-4;
+  }
+
+  .secondary-menu-items {
+    margin-top: 10px;
+    padding-bottom: 8px;
+  }
+
+  .item-container {
+    padding: 6px 16px 16px 16px;
+
+    .menu-item {
+      padding: 8px;
+      cursor: pointer;
+      height: 48px;
+      line-height: 33px;
+      text-align: left;
+      display: flex;
+      color: $gray-7;
+
+      .icon {
+        margin-top: 3px;
+      }
+
+      .name {
+        margin-left: 6px;
+      }
+    }
+
+    .menu-item:hover {
+      background-color: $indigo-3;
+    }
+  }
+}

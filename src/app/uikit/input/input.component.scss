@@ -1,0 +1,48 @@
+@import "../../theming/theme.scss";
+
+.label-textfield-container {
+  .field-label {
+    color: $gray-3;
+    text-transform: uppercase;
+    font-size: $font-size-small;
+    font-weight: $font-weight-bold !important;
+    padding-left: $padding-xs-horizontal;
+  }
+
+  .custom-input-group {
+    width: 100%;
+    height: 40px;
+
+    input:focus {
+      outline: none !important;
+    }
+
+    .inner-field {
+      color: $gray;
+      font-size: $font-size-base;
+      height: inherit;
+      border: 1px solid $gray-6;
+    }
+
+    .custom-group-input-addon {
+      height: 100%;
+      color: $gray-2;
+      font-size: $font-size-base;
+      background-color: $gray-8;
+      font-weight: $font-weight-bold;
+    }
+  }
+}
+
+.required-field {
+  color: $mandy;
+}
+
+.error {
+  color: $mandy !important;
+  border-color: $mandy !important;
+}
+
+.error::placeholder {
+  color: $mandy !important;
+}

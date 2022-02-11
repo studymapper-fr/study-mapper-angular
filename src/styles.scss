@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+@import "app/theming/theme.scss";
+
+* {
+  border-radius: 0px !important;
+  font-family: "Lato", sans-serif;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+/* Global Sidenav Configurations*/
+.mat-sidenav {
+  margin: 0px !important;
+}
+
+.content {
+  margin: 0px !important;
+}

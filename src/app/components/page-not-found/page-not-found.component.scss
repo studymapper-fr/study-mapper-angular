@@ -1,0 +1,50 @@
+@import "../../theming/theme.scss";
+
+.container {
+  padding: 12px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+
+  .section {
+    display: flex;
+    padding: 12px;
+    border: 1px solid $indigo-1;
+    width: max-content;
+    background-color: $white;
+
+    .explore {
+      color: $indigo-1;
+      font-size: 65px;
+      margin-top: 14px;
+      margin-top: 45px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+
+    .error-code {
+      font-weight: 600;
+      padding: 20px;
+      font-size: 50px;
+      color: $indigo-1;
+      padding-left: 0px;
+      line-height: 110px;
+    }
+
+    .error-details {
+      border-left: 1px solid $indigo-1;
+      padding: 20px;
+      .heading {
+        font-size: 18px;
+        font-weight: 300;
+      }
+
+      .button {
+        display: block;
+        width: 115px;
+        height: 40px;
+        margin-top: 12px;
+      }
+    }
+  }
+}
