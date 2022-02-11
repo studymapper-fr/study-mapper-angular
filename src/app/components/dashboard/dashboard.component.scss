@@ -30,7 +30,6 @@ mat-sidenav {
   border-right: none;
   background-image: linear-gradient(to bottom right, $indigo-1, $indigo-3);
   color: $white;
-  padding: 16px;
   text-align: center;
 }
 
@@ -48,8 +47,10 @@ mat-sidenav-container {
 
 .side-bar-container {
   .logo {
+    padding: 7px;
     display: flex;
     justify-content: flex-start;
+    background-color: $indigo;
 
     img {
       width: 180px;
@@ -57,7 +58,6 @@ mat-sidenav-container {
   }
 
   .primary-menu-items {
-    margin-top: 10px;
     padding-bottom: 8px;
     border-bottom: 1px solid $gray-4;
   }
@@ -68,6 +68,8 @@ mat-sidenav-container {
   }
 
   .item-container {
+    padding: 6px 16px 16px 16px;
+
     .menu-item {
       padding: 8px;
       cursor: pointer;
