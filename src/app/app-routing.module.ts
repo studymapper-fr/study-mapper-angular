@@ -7,6 +7,8 @@ import {
 } from "./components";
 
 const routes: Routes = [
+  { path: "register", component: RegisterComponent },
+  { path: "login", component: LoginComponent },
   {
     path: "",
     loadChildren: () =>
@@ -14,8 +16,6 @@ const routes: Routes = [
         (m) => m.DashboardModule
       ),
   },
-  { path: "register", component: RegisterComponent },
-  { path: "login", component: LoginComponent },
   { path: "**", component: PageNotFoundComponent },
 ];
 

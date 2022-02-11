@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
+import { Router } from "@angular/router";
 import { CATEGORIES } from "./register.constant";
 @Component({
   selector: "app-register",
@@ -11,7 +12,7 @@ export class RegisterComponent implements OnInit {
 
   public registerForm: FormGroup | undefined;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     this.registerForm = new FormGroup({
@@ -22,5 +23,9 @@ export class RegisterComponent implements OnInit {
       password: new FormControl(""),
       confirmPassword: new FormControl(""),
     });
+  }
+
+  navigateToLogin() {
+    this.router.navigateByUrl("/login");
   }
 }

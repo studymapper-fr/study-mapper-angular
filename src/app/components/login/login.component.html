@@ -1,107 +1,93 @@
-<div class="min-h-full flex">
-  <div class="flex flex-col py-12 px-4 sm:px-6 lg:px-10 xl:px-12">
-    <img class="flex flex-start w-48 h-8" src="../../../assets/logo_text.png" alt="Workflow">
-    <div class="flex-1 flex flex-col justify-center items-center py-12 px-4 sm:px-6 lg:px-10 xl:px-12">
-      <div class="px-0 sm:px-10">
-        <div class="mx-auto w-full max-w-sm lg:w-96">
-          <div class="pb-10">
-            <span class="mt-6 text-lg font-semibold text-black">
-              Sign In
-            </span>
-            <p class="mt-2 text-sm text-grey-text text-justify">
-              Don't have an account? <span class="text-primary font-bold">Sign Up here</span>
-            </p>
-          </div>
-          
-            <form [formGroup]="signinForm" (ngSubmit)="onSubmit()" class="space-y-6">
-              <div>
-                <div class="mt-1">
-                  <input id="email" name="email" type="email" placeholder="Email address" autocomplete="email" formControlName="email" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                </div>
-              </div>
-              <div class="space-y-1">
-                <div class="relative mt-1">
-                  <input id="password" placeholder="Password" name="password" type="password" autocomplete="current-password" formControlName="password" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                  <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                    <ng-icon class="h-6 w-6 text-grey-icon" name="hero-lock-closed" size="18" >
-                    </ng-icon>
-                  </div>
-                </div>
-              </div>
-              <div class="flex justify-between">
-                <div class="relative flex items-start">
-                  <div class="flex items-center h-5">
-                    <input id="rememberMe" aria-describedby="remember-me" name="rememberMe" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-primary border-gray-300 rounded">
-                  </div>
-                  <div class="ml-3 text-sm">
-                    <label for="rememberMe" class="text-grey-text">Remember Me</label>
-                  </div>
-                </div>
-                <span class="text-primary">
-                  
-                </span>
-              </div>
-  
-              <div>
-                <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
-                 Login
-                </button>
-              </div>
-            </form>
-         
-        </div>
-      </div>
+<div class="register-container">
+  <div class="container">
+    <div class="image-logo"><img src="assets/logo-black.webp" /></div>
 
-    </div>
-    <div class="flex justify-center items-center text-center relative">
-      <div class="absolute bottom-6"> 
-        <span class="text-xs font-semibold text-grey-500">By signing up, you agree to our &nbsp;<span class="text-grey-900">Terms, Data Policy</span> &nbsp;and &nbsp;<span class="text-grey-900">Cookies Policy</span>.</span>
+    <div class="detail-section">
+      <div class="heading">Join The Network</div>
+      <div class="heading-details">
+        Studymapper is the new platform that shakes codes by putting artificial
+        intelligence at the service of school guidance and professional
+        integration! Our solution is based on machine learning technology to
+        offer students training courses leading to future professions and
+        orientations.
       </div>
     </div>
-   
-  </div>
 
+    <div class="register-form login-form">
+      <app-input
+        class="field"
+        placeholder="Enter Your Email Address"
+      ></app-input>
 
+      <app-input
+        class="field"
+        type="password"
+        placeholder="Enter Password"
+      ></app-input>
 
-
-<div class="hidden lg:block relative w-0 flex-1">
-  <img class="absolute inset-0 h-full w-full object-cover z-10" src="../../../assets/signup-img-bg.png" alt="">
-  <div class = "flex flex-col justify-center items-center px-lg h-full">
-    <div class = "flex flex-col flex-start">
-      <span class="text-white text-3xl z-50">
-        Let yourself be guided with 
-        <span class="font-bold">Studymapper!</span><br/>
-        We are here to <span class="font-bold">help you!</span>
-      </span>
-      <div class="flex space-x-2 py-8">
-        <div class="p-2 border border-white rounded z-50">
-          <span class="text-white text-sm">7000 schools</span>
-        </div>
-        <div class="p-2 border border-white rounded z-50">
-          <span class="text-white text-sm">55,000 training courses</span>
-        </div>
-        <div class="p-2 border border-white rounded z-50">
-          <span class="text-white text-sm">Free mentor dedicated to your research</span>
-        </div>
+      <div class="button-style">
+        <app-icon-button text="Login"></app-icon-button>
       </div>
-      <div class="flex flex-col space-y-2 py-4 z-50 text-lg text-white">
-          <li>More than 30.000 students supported in their training. </li>
-          <li>Direct link with schools in France and in a selection of schools abroad.</li>
-          <li>A dedicated mentor accompanies you from A to Z in your search for training.</li>
+
+      <div class="button-style button-style-margin">
+        <app-icon-button
+          text="Register Yourself"
+          [outline]="true"
+          (click)="navigateToRegister()"
+        ></app-icon-button>
       </div>
     </div>
-    <div class="absolute bottom-8 right-12 z-50">
-      <div class="flex space-x-2 py-2 text-white z-50">
-        <svg width="24" height="29" viewBox="0 0 24 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M14.2227 22.0695L15.1724 21.4046C15.3989 21.2639 15.6173 21.1462 15.829 21.0594C16.2949 20.8684 16.5875 20.8824 16.817 20.9998C16.8177 21.0001 16.8184 21.0005 16.8191 21.0009L16.8215 21.0021C18.3795 21.8165 19.9466 22.6357 21.5153 23.4201C22.102 23.7312 22.2669 23.9467 22.3085 24.0462L22.3087 24.0466C22.3225 24.0796 22.3955 24.254 22.099 24.7764L22.099 24.7764L22.0925 24.7881C21.6185 25.6501 20.7149 26.4898 19.647 27.0335C18.5727 27.5805 17.48 27.7556 16.6291 27.5106L16.6249 27.5094C6.90309 24.756 0.309858 15.5443 1.05775 5.28029C1.12231 4.40433 1.66532 3.4305 2.55147 2.59578C3.43185 1.76649 4.52829 1.19334 5.48756 1.03574L5.48982 1.03536C6.07677 0.937551 6.22613 1.06701 6.26088 1.09912C6.34492 1.17679 6.49311 1.41094 6.57399 2.05696C6.68059 2.92739 6.7872 3.80683 6.8939 4.68701L6.89494 4.69563C7.00131 5.57312 7.10777 6.45132 7.21424 7.32079L7.21416 7.3208L7.21584 7.33324C7.251 7.59331 7.16628 7.87126 6.83247 8.24175C6.48298 8.62966 5.97087 8.99382 5.3754 9.39084L5.36597 9.39712L5.35669 9.40362C4.70394 9.86052 4.41291 10.5496 4.33446 11.237C4.25816 11.9055 4.37096 12.6335 4.57421 13.3422C4.98253 14.7658 5.83206 16.3698 6.83609 17.8042C7.84012 19.2385 9.05646 20.5858 10.2543 21.4567C10.8505 21.8903 11.496 22.2454 12.1502 22.4026C12.8229 22.5641 13.57 22.5265 14.2227 22.0695Z" stroke="white" stroke-width="2"/>
-        </svg>
-        <span>06 271 179 632</span>
-        
-      </div>
+
+    <div class="footer disclaimer">
+      By signing up, you agree to our <span class="highlighted">Terms</span>,
+      <span class="highlighted">Data Policy</span> and
+      <span class="highlighted">Cookie Policy</span>
     </div>
   </div>
 
+  <div class="container banner-style">
+    <div class="banner">
+      <div class="banner-heading">
+        <div class="heading-item">
+          Let yourself be guided with
+          <span class="bold large-font">Studymapper!</span>
+        </div>
 
-</div>
-</div>
+        <div class="heading-item">
+          We are here to
+          <span class="bold large-font">help you!</span>
+        </div>
 
+        <div class="heading-stats">
+          <div class="stat">7,000 schools</div>
+          <div class="stat">55,000 training sessions</div>
+          <div class="stat">Free mentor dedicated to your research</div>
+        </div>
+      </div>
+
+      <div class="banner-details">
+        <div>
+          <li>
+            More than 30,000 foreign students supported in their search for
+            training.
+          </li>
+          <li>
+            Direct link with schools in France and in a selection of schools
+            abroad.
+          </li>
+          <li>
+            A dedicated mentor accompanies you from A to Z in your search for
+            training.
+          </li>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="phone-number-container">
+        <span class="call-icon material-icons">call</span>
+        <span class="phone-number">+33 6 59 73 33 94</span>
+      </div>
+    </div>
+  </div>
+</div>

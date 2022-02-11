@@ -1,21 +1,24 @@
-import { Component, OnInit } from '@angular/core'
-import {FormControl, FormGroup, Validators} from '@angular/forms';
-
+import { Component, OnInit } from "@angular/core";
+import { FormControl, FormGroup, Validators } from "@angular/forms";
+import { Router } from "@angular/router";
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  selector: "app-login",
+  templateUrl: "./login.component.html",
+  styleUrls: ["../register/register.component.scss"],
 })
 export class LoginComponent implements OnInit {
-  signinForm = new FormGroup({
-    email: new FormControl(''),
-    password: new FormControl('')
-  })
-  constructor() {}
+  public loginForm: FormGroup | undefined;
 
-  ngOnInit(): void {}
+  constructor(private router: Router) {}
 
-  onSubmit() {
-    console.log(this.signinForm.value)
+  ngOnInit(): void {
+    this.loginForm = new FormGroup({
+      email: new FormControl(""),
+      password: new FormControl(""),
+    });
+  }
+
+  navigateToRegister() {
+    this.router.navigateByUrl("/register");
   }
 }

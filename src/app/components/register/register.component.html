@@ -43,8 +43,16 @@
         placeholder="Confirm password"
       ></app-input>
 
-      <div class="button-style">
+      <div class="button-style mt-4">
         <app-icon-button text="Register"></app-icon-button>
+      </div>
+
+      <div class="button-style button-style-margin">
+        <app-icon-button
+          [outline]="true"
+          text="Already Signed Up?"
+          (click)="navigateToLogin()"
+        ></app-icon-button>
       </div>
     </div>
 
