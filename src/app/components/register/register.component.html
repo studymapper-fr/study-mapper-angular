@@ -1,0 +1,103 @@
+<div class="register-container">
+  <div class="container">
+    <div class="image-logo"><img src="assets/logo-black.webp" /></div>
+
+    <div class="detail-section">
+      <div class="heading">Join The Network</div>
+      <div class="heading-details">
+        Studymapper is the new platform that shakes codes by putting artificial
+        intelligence at the service of school guidance and professional
+        integration! Our solution is based on machine learning technology to
+        offer students training courses leading to future professions and
+        orientations.
+      </div>
+
+      <div class="item-section">
+        <div class="section" *ngFor="let category of categories">
+          <div class="container">
+            <span class="material-icons-outlined">
+              {{ category.icon }}
+            </span>
+          </div>
+          <span class="section-title">{{ category.name }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="register-form">
+      <app-input class="field" placeholder="Enter Your Name"></app-input>
+      <app-input
+        class="field"
+        placeholder="Enter Your Email Address"
+      ></app-input>
+
+      <app-input
+        class="field"
+        type="password"
+        placeholder="Enter Password"
+      ></app-input>
+
+      <app-input
+        class="field"
+        type="password"
+        placeholder="Confirm password"
+      ></app-input>
+
+      <div class="button-style">
+        <app-icon-button text="Register"></app-icon-button>
+      </div>
+    </div>
+
+    <div class="footer disclaimer">
+      By signing up, you agree to our <span class="highlighted">Terms</span>,
+      <span class="highlighted">Data Policy</span> and
+      <span class="highlighted">Cookie Policy</span>
+    </div>
+  </div>
+
+  <div class="container banner-style">
+    <div class="banner">
+      <div class="banner-heading">
+        <div class="heading-item">
+          Let yourself be guided with
+          <span class="bold large-font">Studymapper!</span>
+        </div>
+
+        <div class="heading-item">
+          We are here to
+          <span class="bold large-font">help you!</span>
+        </div>
+
+        <div class="heading-stats">
+          <div class="stat">7,000 schools</div>
+          <div class="stat">55,000 training sessions</div>
+          <div class="stat">Free mentor dedicated to your research</div>
+        </div>
+      </div>
+
+      <div class="banner-details">
+        <div>
+          <li>
+            More than 30,000 foreign students supported in their search for
+            training.
+          </li>
+          <li>
+            Direct link with schools in France and in a selection of schools
+            abroad.
+          </li>
+          <li>
+            A dedicated mentor accompanies you from A to Z in your search for
+            training.
+          </li>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="phone-number-container">
+        <span class="call-icon material-icons">call</span>
+        <span class="phone-number">+33 6 59 73 33 94</span>
+      </div>
+    </div>
+  </div>
+</div>

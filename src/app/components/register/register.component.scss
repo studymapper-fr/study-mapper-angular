@@ -1,0 +1,207 @@
+@import "../../theming/theme.scss";
+
+.register-container {
+  display: flex;
+  height: 905px;
+  overflow: hidden;
+
+  .container {
+    flex: 0.4;
+    padding: 35px;
+    position: relative;
+    overflow: hidden;
+
+    .image-logo {
+      img {
+        width: 220px;
+      }
+    }
+
+    .detail-section {
+      width: 78%;
+      margin-top: 10%;
+      margin-left: 4%;
+    }
+
+    .heading {
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 14px;
+    }
+
+    .heading-details {
+      color: $gray-3;
+      text-align: justify;
+    }
+
+    .register-form {
+      padding: 40px;
+      padding-top: 0px;
+
+      .field {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      .button-style {
+        height: 40px;
+      }
+    }
+
+    .label {
+      text-transform: uppercase;
+    }
+
+    .item-section {
+      margin-top: 45px;
+      display: flex;
+      margin-bottom: 45px;
+      align-items: center;
+      justify-content: center;
+
+      .section {
+        .container {
+          border: 1px solid $indigo-1;
+          color: $indigo-1;
+          margin-right: 28px;
+          padding: 10px;
+          width: 50px;
+          text-align: center;
+          width: 100px;
+
+          span {
+            font-size: 44px;
+            margin-top: 4px;
+          }
+        }
+
+        .container:hover {
+          color: $white;
+          background-color: $indigo-3;
+          cursor: pointer;
+        }
+
+        .section-title {
+          text-align: center;
+          width: 82%;
+          color: $indigo-1;
+          display: block;
+          font-size: 15px;
+          margin-top: 4px;
+        }
+      }
+    }
+
+    .stepper-container {
+      width: 82%;
+
+      .section {
+        display: flex;
+        justify-content: center;
+
+        .step {
+          border-radius: 50% !important;
+          text-align: center;
+          border: 1px solid $indigo-2;
+          padding: 4px;
+          color: $white;
+          background-color: $indigo-2;
+          width: 32px;
+          cursor: pointer;
+        }
+
+        .disabled {
+          background-color: $white;
+          color: $indigo-2;
+          cursor: not-allowed;
+        }
+
+        .connector {
+          width: 20px;
+          border: 1px solid $indigo-1;
+          height: 0px;
+          margin-top: 16px;
+        }
+      }
+    }
+
+    .footer {
+      width: 85%;
+      position: absolute;
+      bottom: 25px;
+      text-align: center;
+      color: $gray-3;
+    }
+
+    .phone-number-container {
+      text-align: end;
+
+      .call-icon {
+        color: $white;
+        border: 1px solid $white;
+        border-radius: 50% !important;
+        padding: 4px;
+        font-size: 15px;
+      }
+
+      .phone-number {
+        height: 40px;
+        line-height: 40px;
+        margin-left: 10px;
+        color: $white;
+      }
+    }
+  }
+
+  .banner-style {
+    flex: 0.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom right, $indigo-1, $indigo-6);
+
+    .banner {
+      flex: 0.6;
+      padding: 20px;
+      color: $white;
+      width: max-content;
+
+      .banner-heading {
+        .heading-item {
+          font-size: 30px;
+          font-weight: 300;
+        }
+
+        .heading-stats {
+          display: flex;
+          margin-top: 18px;
+          margin-bottom: 18px;
+
+          .stat {
+            width: max-content;
+            padding: 6px;
+            font-weight: 300;
+            border: 1px solid $white;
+            margin-right: 12px;
+          }
+        }
+      }
+
+      .banner-details {
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+.highlighted {
+  color: black;
+  font-weight: 500;
+  font-size: 15px;
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+}
+
+.bold {
+  font-weight: 700;
+}

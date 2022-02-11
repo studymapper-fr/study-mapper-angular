@@ -1,0 +1,10 @@
+<button
+  [type]="buttonType"
+  [disabled]="disabled"
+  (click)="clicked.emit()"
+  class="prop-btn icon-button"
+  [ngClass]="getButtonClass()"
+>
+  <i *ngIf="icon" class="fa fa-{{ icon }} fa-lg icon"></i>
+  <span *ngIf="text" [ngClass]="{ 'padded-text': icon }">{{ text }}</span>
+</button>

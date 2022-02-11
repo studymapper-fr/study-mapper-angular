@@ -1,32 +1,43 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { NgIconsModule } from '@ng-icons/core';
-import { AppRoutingModule } from './app-routing.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AppComponent } from './app.component';
-import { SignupComponent } from './components/signup/signup.component';
-import { HomeComponent } from './components/home/home.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { HeroHome, HeroClock,HeroCog, HeroShieldExclamation, HeroCheck, HeroLockClosed } from '@ng-icons/heroicons';
-import { LoginComponent } from './components/login/login.component';
-
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { AppRoutingModule } from "./app-routing.module";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { AppComponent } from "./app.component";
+import { PageNotFoundComponent } from "./components/page-not-found/page-not-found.component";
+import { LoginComponent } from "./components/login/login.component";
+import { DashboardComponent } from "./components/dashboard/dashboard.component";
+import { RegisterModule } from "./components/register/register.module";
+import { UIKitModule } from "./uikit/uikit.module";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatButtonModule } from "@angular/material/button";
+import { MatIconModule } from "@angular/material/icon";
+import { MatDividerModule } from "@angular/material/divider";
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignupComponent,
-    HomeComponent,
     PageNotFoundComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    NgIconsModule.withIcons({  HeroClock, HeroCog,HeroHome, HeroShieldExclamation, HeroCheck,HeroLockClosed })
+    RegisterModule,
+    UIKitModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatDividerModule,
+    MatButtonModule,
+    MatIconModule,
+    BrowserAnimationsModule,
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

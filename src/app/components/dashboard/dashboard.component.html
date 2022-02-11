@@ -1,0 +1,39 @@
+<mat-sidenav-container>
+  <mat-sidenav mode="side" opened class="side-bar-container">
+    <div class="logo"><img src="assets/logo-white.webp" /></div>
+
+    <div class="primary-menu-items item-container">
+      <div
+        [routerLink]="item.link"
+        class="menu-item"
+        *ngFor="let item of primaryMenuItems"
+      >
+        <span class="material-icons-outlined icon">{{ item.icon }}</span>
+        <div class="name">{{ item.name }}</div>
+      </div>
+    </div>
+
+    <div class="secondary-menu-items item-container">
+      <div
+        [routerLink]="item.link"
+        class="menu-item"
+        *ngFor="let item of secondaryMenuItems"
+      >
+        <span class="material-icons-outlined icon">{{ item.icon }}</span>
+        <div class="name">{{ item.name }}</div>
+      </div>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar class="toolbar">
+      <div class="toolbar-items">
+        <span class="icon material-icons-outlined"> notifications </span>
+        <span class="icon material-icons">account_circle</span>
+      </div>
+    </mat-toolbar>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

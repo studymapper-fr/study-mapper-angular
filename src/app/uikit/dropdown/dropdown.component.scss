@@ -1,0 +1,143 @@
+@import "../../theming/theme.scss";
+
+.label-dropdown-container {
+  .field-label {
+    display: block;
+    color: $gray-3;
+    text-transform: uppercase;
+    font-size: $font-size-small;
+    font-weight: $font-weight-bold !important;
+    padding-left: $padding-xs-horizontal;
+  }
+
+  .dropdown-container {
+    width: 100%;
+    font-size: $font-size-base;
+    color: $gray;
+
+    .no-border {
+      border: none !important;
+    }
+
+    .dropdown-toggle {
+      height: 40px;
+      position: relative;
+      width: 100%;
+      background-color: white;
+      border: 1px solid $gray-6;
+      text-align: left;
+      padding: 0 10px;
+      outline: none;
+      box-shadow: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      :host-context(.small-dropdown) & {
+        height: 20px;
+        line-height: normal;
+      }
+    }
+
+    .dropdown-toggle:disabled {
+      background-color: rgb(238, 238, 238) !important;
+    }
+
+    .dropdown-menu {
+      max-height: none !important;
+      width: 100%;
+      min-width: 100%;
+      box-shadow: none;
+      margin-top: 2px;
+      max-height: 200px;
+      overflow: auto;
+
+      .menu-item-list {
+        overflow-y: auto;
+        max-height: 200px;
+
+        .menu-item {
+          min-height: 40px;
+          line-height: 40px;
+          padding-left: 10px;
+          cursor: pointer;
+
+          .item-next {
+            text-align: right;
+          }
+
+          i.fa {
+            color: $indigo-1;
+          }
+        }
+
+        .menu-item:hover {
+          background-color: $indigo-1;
+          color: $white;
+          i.fa {
+            color: white;
+          }
+        }
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+        background: $gray-7;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: $gray-6;
+      }
+    }
+
+    .dropdown-menu:after {
+      display: none;
+      content: none;
+    }
+
+    .dropdown-menu:before {
+      display: none;
+      content: none;
+    }
+  }
+
+  .clear-icon {
+    position: absolute;
+    right: 20px;
+    top: 25%;
+    color: #e65c65;
+    font-size: 18px;
+  }
+
+  .caret {
+    margin-left: 8px;
+    color: $gray-3;
+  }
+}
+
+.truncate {
+  margin-right: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.required-field {
+  color: $mandy;
+}
+
+.error {
+  color: $mandy !important;
+  border-color: $mandy !important;
+}
+
+.error::placeholder {
+  color: $mandy !important;
+}
+
+.green-font {
+  color: $indigo-1;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
