@@ -4,7 +4,7 @@ STUDYMAPPER-XXXXX: <type=feat|feat!|fix|perf|build|ci|chore|docs|refactor|revert
 
 ## Description
 
-This PR corresponds to the following Task
+This PR corresponds to the following [Task](URL)
 _Please add a short description regarding your changes here_
 
 ## Dependent PRs (Optional)
