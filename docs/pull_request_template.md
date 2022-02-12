@@ -1,6 +1,6 @@
 _Please use the following conventions in naming your PRs and remove the following lines below before proceeding to the Description section_.
 
-STUDY_MAPPER-XXXXX: <type=feat|feat!|fix|perf|build|ci|chore|docs|refactor|revert|style|test> (<feature>) <description>
+STUDYMAPPER-XXXXX: <type=feat|feat!|fix|perf|build|ci|chore|docs|refactor|revert|style|test> (<feature>) <description>
 
 ## Description
 
