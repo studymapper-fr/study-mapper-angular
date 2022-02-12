@@ -2,7 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { RegisterResponse, User } from "./register.interface";
-import { environment } from "@app/environments/environment";
+import { environment } from "@root/environments/environment";
 
 @Injectable()
 export class RegisterService {

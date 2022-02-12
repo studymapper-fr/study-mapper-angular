@@ -14,7 +14,12 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
 import { MatDividerModule } from "@angular/material/divider";
-import { HTTP_INTERCEPTORS } from "@angular/common/http";
+import {
+  HttpClient,
+  HttpClientModule,
+  HttpHandler,
+  HTTP_INTERCEPTORS,
+} from "@angular/common/http";
 import { TokenInterceptor } from "./auth/token.interceptor";
 import { AuthService } from "./auth/auth.service";
 import { StorageService } from "./utility/storage.service";
@@ -38,6 +43,7 @@ import { StorageService } from "./utility/storage.service";
     MatDividerModule,
     MatButtonModule,
     MatIconModule,
+    HttpClientModule,
     BrowserAnimationsModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
