@@ -24,27 +24,39 @@
       </div>
     </div>
 
-    <div class="register-form">
-      <app-input class="field" placeholder="Enter Your Name"></app-input>
+    <div [formGroup]="registerForm" class="register-form">
+      <app-input
+        class="field"
+        placeholder="Enter Your Name"
+        formControlName="name"
+      ></app-input>
+
       <app-input
         class="field"
         placeholder="Enter Your Email Address"
+        formControlName="email"
       ></app-input>
 
       <app-input
         class="field"
         type="password"
         placeholder="Enter Password"
+        formControlName="password"
       ></app-input>
 
       <app-input
         class="field"
         type="password"
         placeholder="Confirm password"
+        formControlName="confirmPassword"
       ></app-input>
 
       <div class="button-style mt-4">
-        <app-icon-button text="Register"></app-icon-button>
+        <app-icon-button
+          text="Register"
+          [disabled]="registerForm.invalid"
+          (click)="submit()"
+        ></app-icon-button>
       </div>
 
       <div class="button-style button-style-margin">

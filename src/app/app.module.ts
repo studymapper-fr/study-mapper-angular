@@ -17,6 +17,7 @@ import { MatDividerModule } from "@angular/material/divider";
 import { HTTP_INTERCEPTORS } from "@angular/common/http";
 import { TokenInterceptor } from "./auth/token.interceptor";
 import { AuthService } from "./auth/auth.service";
+import { StorageService } from "./utility/storage.service";
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { AuthService } from "./auth/auth.service";
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [
     AuthService,
+    StorageService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,
