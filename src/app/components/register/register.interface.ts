@@ -17,6 +17,5 @@ export interface RegisterResponse {
   data: {
     user: User;
   };
-  token: string;
   message: string;
 }
