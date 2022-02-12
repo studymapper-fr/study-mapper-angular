@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
-import { StorageService } from "@app/app/utility/storage.service";
+import { StorageService } from "@app/utility/storage.service";
 import { CATEGORIES } from "./register.constant";
 import { RegisterResponse, User } from "./register.interface";
 import { RegisterService } from "./register.service";
@@ -13,12 +13,11 @@ import { RegisterService } from "./register.service";
 export class RegisterComponent implements OnInit {
   public categories: any = CATEGORIES;
 
-  public registerForm: FormGroup | undefined;
+  public registerForm: FormGroup;
 
   constructor(
     private router: Router,
-    private registerService: RegisterService,
-    private storageService: StorageService
+    private registerService: RegisterService
   ) {}
 
   ngOnInit(): void {

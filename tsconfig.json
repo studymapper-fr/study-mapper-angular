@@ -23,7 +23,8 @@
     "module": "es2020",
     "lib": ["es2020", "dom"],
     "paths": {
-      "@app/*": ["src/*"]
+      "@app/*": ["src/app/*"],
+      "@root/*": ["src/*"]
     }
   },
   "angularCompilerOptions": {
