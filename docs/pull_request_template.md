@@ -1,10 +1,10 @@
 _Please use the following conventions in naming your PRs and remove the following lines below before proceeding to the Description section_.
 
-STUDY_MAPPER-XXXXX: <type=feat|feat!|fix|perf|build|ci|chore|docs|refactor|revert|style|test> (<feature>) <description>
+CU-XXXXX - <type=feat|feat!|fix|perf|build|ci|chore|docs|refactor|revert|style|test> (<feature>) <description>
 
 ## Description
 
-This PR corresponds to the following Task
+This PR corresponds to the following [Task](TASK_URL)
 _Please add a short description regarding your changes here_
 
 ## Dependent PRs (Optional)
