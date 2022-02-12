@@ -14,6 +14,9 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
 import { MatDividerModule } from "@angular/material/divider";
+import { HTTP_INTERCEPTORS } from "@angular/common/http";
+import { TokenInterceptor } from "./auth/token.interceptor";
+import { AuthService } from "./auth/auth.service";
 
 @NgModule({
   declarations: [
@@ -37,7 +40,14 @@ import { MatDividerModule } from "@angular/material/divider";
     BrowserAnimationsModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [],
+  providers: [
+    AuthService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
