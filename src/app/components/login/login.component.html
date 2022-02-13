@@ -13,20 +13,22 @@
       </div>
     </div>
 
-    <div class="register-form login-form">
+    <div [formGroup]="loginForm" class="register-form login-form">
       <app-input
         class="field"
         placeholder="Enter Your Email Address"
+        formControlName="email"
       ></app-input>
 
       <app-input
         class="field"
         type="password"
         placeholder="Enter Password"
+        formControlName="password"
       ></app-input>
 
       <div class="button-style">
-        <app-icon-button text="Login"></app-icon-button>
+        <app-icon-button text="Login" (click)="login()"></app-icon-button>
       </div>
 
       <div class="button-style button-style-margin">
