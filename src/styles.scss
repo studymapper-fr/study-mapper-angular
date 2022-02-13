@@ -24,6 +24,25 @@ body {
   margin: 0;
 }
 
+.bold {
+  font-weight: 700;
+}
+
+/* Flex Field Styles */
+.flex {
+  display: flex;
+}
+
+.field {
+  display: block;
+  margin-bottom: 8px;
+  margin-right: 9px;
+}
+
+.flex-field {
+  flex: 1;
+}
+
 /* Global Sidenav Configurations*/
 .mat-sidenav {
   margin: 0px !important;
