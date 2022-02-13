@@ -32,8 +32,23 @@
       <div class="title">{{ activeTitle }}</div>
 
       <div class="toolbar-items">
-        <span class="icon material-icons-outlined"> notifications </span>
-        <span class="icon material-icons">account_circle</span>
+        <div class="btn-group" dropdown placement="bottom right">
+          <span class="icon material-icons-outlined"> notifications </span>
+          <div class="btn-group" dropdown>
+            <span class="icon material-icons" dropdownToggle>
+              account_circle
+            </span>
+            <ul
+              *dropdownMenu
+              class="dropdown-menu dropdown-menu-right"
+              role="menu"
+            >
+              <li (click)="logout()" role="menuitem">
+                <a class="dropdown-item" href="#">Log Out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </mat-toolbar>
 

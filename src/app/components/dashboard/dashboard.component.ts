@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+import { AuthService } from "@app/auth/auth.service";
 import {
   PRIMARY_MENU_ITEMS,
   SECONDARY_MENU_ITEMS,
@@ -16,11 +18,15 @@ export class DashboardComponent implements OnInit {
 
   public activeTitle: string = PRIMARY_MENU_ITEMS[0].title;
 
-  constructor() {}
+  constructor(private authenticationService: AuthService) {}
 
   ngOnInit(): void {}
 
   setActiveTitle(title: string) {
     this.activeTitle = title;
+  }
+
+  logout(): void {
+    this.authenticationService.logout();
   }
 }

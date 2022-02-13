@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { Notyf } from "notyf";
 
 const options = {
-  duration: 4000,
+  duration: 2000,
   ripple: true,
   dismissible: true,
   className: "custom-notification",
