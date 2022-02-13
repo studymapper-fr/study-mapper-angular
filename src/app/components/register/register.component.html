@@ -25,22 +25,30 @@
     </div>
 
     <div [formGroup]="registerForm" class="register-form">
-      <app-input
-        class="field"
-        placeholder="Enter Your Name"
-        formControlName="name"
-      ></app-input>
+      <div class="flex">
+        <app-input
+          class="field flex-field"
+          placeholder="First Name"
+          formControlName="firstName"
+        ></app-input>
+
+        <app-input
+          class="field flex-field"
+          placeholder="Last Name"
+          formControlName="lastName"
+        ></app-input>
+      </div>
 
       <app-input
         class="field"
-        placeholder="Enter Your Email Address"
+        placeholder="Email Address"
         formControlName="email"
       ></app-input>
 
       <app-input
         class="field"
         type="password"
-        placeholder="Enter Password"
+        placeholder="Password"
         formControlName="password"
       ></app-input>
 
