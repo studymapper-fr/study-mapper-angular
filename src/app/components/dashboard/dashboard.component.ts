@@ -18,10 +18,7 @@ export class DashboardComponent implements OnInit {
 
   public activeTitle: string = PRIMARY_MENU_ITEMS[0].title;
 
-  constructor(
-    private authenticationService: AuthService,
-    private router: Router
-  ) {}
+  constructor(private authenticationService: AuthService) {}
 
   ngOnInit(): void {}
 
@@ -31,6 +28,5 @@ export class DashboardComponent implements OnInit {
 
   logout(): void {
     this.authenticationService.logout();
-    this.router.navigateByUrl("/login");
   }
 }
