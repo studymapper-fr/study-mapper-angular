@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
+import { NotificationService } from "@app/utility/notification.service";
 import { StorageService } from "@app/utility/storage.service";
 import { User } from "../register/register.interface";
 import { LoginResponse } from "./login.interface";
@@ -16,7 +17,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private router: Router,
     private storageService: StorageService,
-    private loginService: LoginService
+    private loginService: LoginService,
+    private notificationService: NotificationService
   ) {}
 
   ngOnInit(): void {
@@ -34,8 +36,11 @@ export class LoginComponent implements OnInit {
         this.storageService.set("token", token);
         this.storageService.set("userInfo", JSON.stringify(user));
         this.router.navigateByUrl("/dashboard");
+        this.notificationService.showSuccess(result);
       },
-      (error) => console.error(error)
+      (error) => {
+        this.notificationService.showError(error);
+      }
     );
   }
 
