@@ -24,6 +24,7 @@ import { TokenInterceptor } from "./auth/token.interceptor";
 import { AuthService } from "./auth/auth.service";
 import { StorageService } from "./utility/storage.service";
 import { LoginModule } from "./components/login/login.module";
+import { NotificationService } from "./utility/notification.service";
 
 @NgModule({
   declarations: [AppComponent, PageNotFoundComponent, DashboardComponent],
@@ -47,6 +48,7 @@ import { LoginModule } from "./components/login/login.module";
   providers: [
     AuthService,
     StorageService,
+    NotificationService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,
