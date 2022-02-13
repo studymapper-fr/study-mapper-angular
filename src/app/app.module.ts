@@ -23,20 +23,17 @@ import {
 import { TokenInterceptor } from "./auth/token.interceptor";
 import { AuthService } from "./auth/auth.service";
 import { StorageService } from "./utility/storage.service";
+import { LoginModule } from "./components/login/login.module";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    PageNotFoundComponent,
-    LoginComponent,
-    DashboardComponent,
-  ],
+  declarations: [AppComponent, PageNotFoundComponent, DashboardComponent],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
     RegisterModule,
+    LoginModule,
     UIKitModule,
     MatSidenavModule,
     MatToolbarModule,

@@ -4,7 +4,7 @@ export interface LoginResponse {
   status: string;
   data: {
     user: User;
+    token: string;
   };
-  token: string;
   message: string;
 }

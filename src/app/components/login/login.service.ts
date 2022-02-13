@@ -9,7 +9,7 @@ import { LoginResponse } from "./login.interface";
 export class LoginService {
   constructor(private http: HttpClient) {}
 
-  postUser(user: User): Observable<LoginResponse> {
+  login(user: User): Observable<LoginResponse> {
     return this.http.post<LoginResponse>(
       `${environment.baseUrl}/v1/users/login`,
       user
