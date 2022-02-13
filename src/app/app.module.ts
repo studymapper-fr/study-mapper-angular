@@ -25,6 +25,7 @@ import { AuthService } from "./auth/auth.service";
 import { StorageService } from "./utility/storage.service";
 import { LoginModule } from "./components/login/login.module";
 import { NotificationService } from "./utility/notification.service";
+import { BsDropdownModule } from "ngx-bootstrap/dropdown";
 
 @NgModule({
   declarations: [AppComponent, PageNotFoundComponent, DashboardComponent],
@@ -43,6 +44,7 @@ import { NotificationService } from "./utility/notification.service";
     MatIconModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    BsDropdownModule.forRoot(),
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [
