@@ -26,6 +26,7 @@ import { StorageService } from "./utility/storage.service";
 import { LoginModule } from "./components/login/login.module";
 import { NotificationService } from "./utility/notification.service";
 import { BsDropdownModule } from "ngx-bootstrap/dropdown";
+import { HelpComponent } from "./components/help/help.component";
 
 @NgModule({
   declarations: [AppComponent, PageNotFoundComponent, DashboardComponent],
